@@ -58,7 +58,7 @@
 	departmental_flags = DEPARTMENTAL_FLAG_ENGINEERING | DEPARTMENTAL_FLAG_SCIENCE
 
 /datum/design/board/thermomachine
-	name = "Machine Design (Freezer/Heater Board)"
+	name = "Machine Design (Thermomachine Board)"
 	desc = "The circuit board for a freezer/heater."
 	id = "thermomachine"
 	build_path = /obj/item/circuitboard/machine/thermomachine
