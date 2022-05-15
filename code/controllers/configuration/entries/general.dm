@@ -27,6 +27,9 @@
 
 /datum/config_entry/string/servername // server name (the name of the game window)
 
+/// Server short description
+/datum/config_entry/string/serverdesc
+
 /datum/config_entry/string/serversqlname // short form server name used for the DB
 
 /datum/config_entry/string/stationname // station name (the name of the station in-game)
