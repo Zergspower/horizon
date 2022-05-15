@@ -35,7 +35,7 @@
 	var/navlinks = navlinks_list.len ? " &#x2014; [jointext(navlinks_list, " | ")]" : ""
 	var/population_text = "[clients][popcap ? "/[popcap]" : ""] connected, [players] playing"
 	var/map_text = "Current Map: [SSmapping.config.map_name]"
-	var/hostedby_text = hostedby && !host ? " | Hosted by [hostedby]" : ""
+	var/hostedby_text = hostedby && !world.host ? " | Hosted by [hostedby]" : ""
 
 	// Our custom status construct
 	var/hubstatus = {"
