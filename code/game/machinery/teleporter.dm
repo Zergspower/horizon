@@ -79,11 +79,18 @@
 				if(ishuman(M))//don't remove people from the round randomly you jerks
 					var/mob/living/carbon/human/human = M
 					if(!(human.mob_biotypes & (MOB_ROBOTIC|MOB_MINERAL|MOB_UNDEAD|MOB_SPIRIT)))
-						if(human.dna && human.dna.species.id != "fly")
-							to_chat(M, SPAN_HEAR("You hear a buzzing in your ears."))
-							human.set_species(/datum/species/fly)
-							log_game("[human] ([key_name(human)]) was turned into a fly person")
+						var/list/dismemberable_bodyparts = list()
 
+						for(var/obj/item/bodypart/bodypart as anything in human.bodyparts)
+							if(bodypart.body_part != HEAD && bodypart.body_part != CHEST)
+								if(bodypart.dismemberable)
+									dismemberable_bodyparts += bodypart
+
+						if(!dismemberable_bodyparts.len)
+							return
+
+						var/obj/item/bodypart/bodypart_to_dismember = pick(dismemberable_bodyparts)
+						bodypart_to_dismember.dismember()
 					human.apply_effect((rand(120 - accuracy * 40, 180 - accuracy * 60)), EFFECT_IRRADIATE, 0)
 			calibrated = FALSE
 	return
