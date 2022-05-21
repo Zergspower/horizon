@@ -86,11 +86,9 @@
 								if(bodypart.dismemberable)
 									dismemberable_bodyparts += bodypart
 
-						if(!dismemberable_bodyparts.len)
-							return
-
-						var/obj/item/bodypart/bodypart_to_dismember = pick(dismemberable_bodyparts)
-						bodypart_to_dismember.dismember()
+						if(dismemberable_bodyparts.len)
+							var/obj/item/bodypart/bodypart_to_dismember = pick(dismemberable_bodyparts)
+							bodypart_to_dismember.dismember()
 					human.apply_effect((rand(120 - accuracy * 40, 180 - accuracy * 60)), EFFECT_IRRADIATE, 0)
 			calibrated = FALSE
 	return
