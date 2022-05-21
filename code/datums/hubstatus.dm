@@ -29,7 +29,7 @@
 
 	// Our custom status construct
 	var/hubstatus = {"
-	<b>[website_url ? "<a href=\"[website_url]\">[server_name]</a>" : server_name]</b>[forumurl_text]\];
+	<b>[website_url ? "<a href=\"[website_url]\">[server_name]</a>" : server_name]</b>\] [forumurl_text]
 	[server_desc ? "<i>[server_desc]</i>" : ""]
 
 	[map_text]
