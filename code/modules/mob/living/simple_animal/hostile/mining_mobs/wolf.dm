@@ -11,13 +11,13 @@
 	friendly_verb_simple = "howl at"
 	speak_emote = list("howls")
 	speed = 5
-	move_to_delay = 5
-	maxHealth = 130
-	health = 130
+	move_to_delay = 10
+	maxHealth = 100
+	health = 100
 	obj_damage = 15
 	melee_damage_lower = 7.5
 	melee_damage_upper = 7.5
-	rapid_melee = 2 // every second attack
+	rapid_melee = 6 // every second attack
 	dodging = TRUE
 	dodge_prob = 50
 	attack_verb_continuous = "bites"
