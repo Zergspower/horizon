@@ -149,6 +149,7 @@
 													continue
 											if(teleport_console.is_eligible(tracked_implant))
 												tp_locations[avoid_assoc_duplicate_keys("[tracked_mob.real_name] ([get_area(tracked_mob)])", areaindex)] = tracked_implant
+								teleport_console.say("Warning: Calibration error, could not cleanly lock onto beacon.")
 								teleport_console.set_teleport_target(tp_locations[desc])
 
 					human.apply_effect((rand(120 - accuracy * 40, 180 - accuracy * 60)), EFFECT_IRRADIATE, 0)
