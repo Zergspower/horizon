@@ -159,6 +159,7 @@
 #undef TELEPORT_FAILURE_RESULT_BURN
 #undef TELEPORT_FAILURE_RESULT_ORGANDAMAGE
 #undef TELEPORT_FAILURE_RESULT_DISMEMBER
+#undef TELEPORT_FAILURE_RESULT_RANDOMBEACON
 
 /obj/machinery/teleport/hub/update_icon_state()
 	icon_state = "[base_icon_state][panel_open ? "-o" : (is_ready() ? 1 : 0)]"
